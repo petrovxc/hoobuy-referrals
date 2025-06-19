@@ -4,7 +4,7 @@ import requests, uuid, hashlib, time, os, pystyle, json, re
 
 ammount    = 150  # ammount of total registrations
 send_delay = 300  # delay between each send (in seconds)
-refferal   = ""   # refferal code tokens should use
+referral   = ""   # refferal code tokens should use
 proxy      = ""   # rotating proxy
 
 # ---
@@ -96,7 +96,7 @@ class Register:
     def register_acc(self):
         url = "https://api.hoobuy.com/hoobuy_account/pub/register"
         
-        body = {"email" : self.email, "password" : self.email, "verifyCode" : self.check_code(), "referralCode" : refferal, "utm_source" : "", "utm_medium" : "", "utm_campaign" : ""}
+        body = {"email" : self.email, "password" : self.email, "verifyCode" : self.check_code(), "referralCode" : referral, "utm_source" : "", "utm_medium" : "", "utm_campaign" : ""}
         
         x_nonce     = str(uuid.uuid4())
         x_signature = hashlib.md5(f"{x_nonce}980683EF-46C6-47D5-80C1-7B2CB6B2D0BF".encode()).hexdigest()
@@ -116,7 +116,7 @@ class Register:
 def main():
     for i in range(ammount):
         os.system("cls" if os.name == "nt" else "clear")
-        print(pystyle.Center.XCenter(f"\n/petrovxc | refferal: {refferal} | ammount: {ammount} | delay: {send_delay}s | finished: {i}\n\n"))
+        print(pystyle.Center.XCenter(f"\n/petrovxc | referral: {referral} | ammount: {ammount} | delay: {send_delay}s | finished: {i}\n\n"))
         
         if Register():
             time.sleep(send_delay)
