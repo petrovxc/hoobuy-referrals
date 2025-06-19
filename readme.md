@@ -1,10 +1,10 @@
-# Proof of Concept Only! Outdated and only ethical upload :)
+# PoC! Only ethical upload :)
 
 Python script for farming referrals on [hoobuy.com](https://hoobuy.com/).
 
 ![alt text](https://raw.githubusercontent.com/petrovxc/hoobuy-referrals/refs/heads/main/screenshot.png)
 
-Uploaded and working (19/06/25)
+Uploaded (19/06/25)
 
 #### How I made this
 Reversed the javascript file for encoding the header, and using a temp mail provider called [minuteinbox](https://www.minuteinbox.com/). Used to be all automatic, by registering to hoobuy and confirming the email address, by filtering the code from minuteinbox.
